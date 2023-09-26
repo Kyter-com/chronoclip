@@ -1,8 +1,12 @@
 {
-  "name": "vite-template-solid",
+  "name": "remurl",
   "version": "0.0.0",
   "description": "",
   "type": "module",
+  "author": {
+    "name": "Nick Reisenauer",
+    "url": "https://github.com/NickReisenauer"
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
