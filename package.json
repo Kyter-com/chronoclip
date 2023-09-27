@@ -1,12 +1,8 @@
 {
-  "name": "remurl",
+  "name": "vite-template-solid",
   "version": "0.0.0",
   "description": "",
   "type": "module",
-  "author": {
-    "name": "Nick Reisenauer",
-    "url": "https://github.com/NickReisenauer"
-  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
@@ -15,7 +11,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@crxjs/vite-plugin": "^2.0.0-beta.18",
+    "@crxjs/vite-plugin": "^2.0.0-beta.19",
     "solid-devtools": "^0.27.3",
     "typescript": "^5.1.3",
     "vite": "^4.3.9",
