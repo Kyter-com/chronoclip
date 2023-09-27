@@ -1,15 +1,17 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    target-branch: "main"
-    directory: "/"
+  - package-ecosystem: npm
+    target-branch: main
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
     assignees:
       - NickReisenauer
-  - package-ecosystem: "github-actions"
-    directory: "/"
+
+  - package-ecosystem: github-actions
+    target-branch: main
+    directory: /
     schedule:
-      interval: "daily"
+      interval: daily
     assignees:
       - NickReisenauer
