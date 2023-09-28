@@ -1,7 +1,6 @@
 # remurl
 
-`remurl` is a Chrome extension that allows you to save notes on specific urls.
-Built with `Solid` and `crxjs`.
+`remurl` is a Chrome extension template using `Solid` and `crxjs`.
 
 WIP
 
