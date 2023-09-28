@@ -1,5 +1,9 @@
 # To Do
 
-- Rename vite, package, html, etc
 - Change versioning
 - README
+- Playwright automated testing?
+- Consolidate index.tsx/App.tsx file
+- Consolidate css files
+- Manifest with crxjs ts file
+- Look at Solid devtools?
