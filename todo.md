@@ -1,6 +1,5 @@
 # To Do
 
-- Change versioning
 - README
 - Playwright automated testing?
 - Consolidate index.tsx/App.tsx file
