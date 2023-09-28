@@ -1,6 +1,5 @@
 # To Do
 
-- Consolidate css files
-- Manifest with crxjs ts file
+- Convert to css module for styles / autocomplete
 - Look at Solid devtools?
 - Playwright automated testing?
