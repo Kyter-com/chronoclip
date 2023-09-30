@@ -7,7 +7,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
   color: white;
-  width: 25rem;
+  width: 35rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -33,18 +33,19 @@ input:focus {
 }
 
 .time-container {
-  max-width: 25rem;
+  width: 34rem;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 1rem 0rem 1rem 0rem;
+  justify-content: space-evenly;
 }
 .time-tile {
   background-color: #3b404a;
   padding: 0rem 0.5rem 0.8rem 0.5rem;
   border-radius: 0.2rem;
   margin: 0rem 0.2rem 0rem 0.2rem;
-  width: 10rem;
+  width: 15rem;
   margin-top: 0.4rem;
 }
 
@@ -54,4 +55,5 @@ code {
   background-color: #1b1b1b;
   padding: 0.25rem;
   border-radius: 0.2rem;
+  display: inline-block;
 }
