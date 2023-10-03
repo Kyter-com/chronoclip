@@ -12,7 +12,9 @@ import "./index.css";
 import type { Component } from "solid-js";
 
 const Index: Component = () => {
-  const [unix_timestamp, set_unix_timestamp] = createSignal<number>(Date.now());
+  const [unix_timestamp, set_unix_timestamp] = createSignal<number | string>(
+    Date.now()
+  );
   const [iso_timestamp, set_iso_timestamp] = createSignal<string>(
     new Date().toISOString()
   );
@@ -31,14 +33,42 @@ const Index: Component = () => {
           type="text"
           placeholder="Timestamp"
           onInput={(e) => {
+            console.log(e.currentTarget.value);
             const value = parse_input_date(e.currentTarget.value);
+            if (!value) return; // TODO: Parse error
+            // TODO: Handle empty input state
 
-            // TODO: Fix console errors with try catch for setting values, or set "invalid date"
-            if (value) {
-              set_unix_timestamp(value.getTime());
+            if (!e.currentTarget.value) {
+              set_iso_timestamp(new Date().toISOString());
+              set_locale_string(new Date().toLocaleString());
+              set_locale_iso_timestamp(get_local_iso_date());
+              set_unix_timestamp(Date.now());
+            }
+
+            try {
               set_iso_timestamp(value.toISOString());
+            } catch (e) {
+              set_iso_timestamp("Invalid Date");
+            }
+
+            try {
               set_locale_string(value.toLocaleString());
+            } catch (e) {
+              set_locale_string("Invalid Date");
+            }
+
+            try {
               set_locale_iso_timestamp(get_local_iso_date(value));
+            } catch (e) {
+              set_locale_iso_timestamp("Invalid Date");
+            }
+
+            try {
+              if (!Number.isNaN(value.getTime())) {
+                set_unix_timestamp(value.getTime());
+              } else set_unix_timestamp("Invalid Date");
+            } catch (e) {
+              set_unix_timestamp("Invalid Date");
             }
           }}
         />
