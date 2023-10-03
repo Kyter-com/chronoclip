@@ -3,7 +3,7 @@ import { render } from "solid-js/web";
 import { createSignal } from "solid-js";
 
 // Utils
-import { get_local_iso_date } from "./utils";
+import { get_local_iso_date, parse_input_date } from "./utils";
 
 // CSS
 import "./index.css";
@@ -26,8 +26,22 @@ const Index: Component = () => {
   return (
     <main>
       <h1 class="title">remurl</h1>
-      <form>
-        <input type="text" placeholder="Timestamp" />
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="text"
+          placeholder="Timestamp"
+          onInput={(e) => {
+            const value = parse_input_date(e.currentTarget.value);
+
+            // TODO: Fix console errors with try catch for setting values, or set "invalid date"
+            if (value) {
+              set_unix_timestamp(value.getTime());
+              set_iso_timestamp(value.toISOString());
+              set_locale_string(value.toLocaleString());
+              set_locale_iso_timestamp(get_local_iso_date(value));
+            }
+          }}
+        />
       </form>
 
       <div class="time-container">
