@@ -1,18 +1,20 @@
-// TODO: Clean this up and give credit https://stackoverflow.com/questions/49330139/date-toisostring-but-local-time-instead-of-utc
-const get_local_iso_date = (q?: any) => {
-  const d = q || new Date();
-  const z = (n: any) => ("0" + n).slice(-2);
-  let off = d.getTimezoneOffset();
-  const sign = off < 0 ? "+" : "-";
-  off = Math.abs(off);
+import { DateTime } from "luxon";
+
+// Credit to https://stackoverflow.com/a/65080112
+const get_local_iso_date = (starting_date?: Date) => {
+  const date = starting_date || new Date();
+  const parser = (n: any) => ("0" + n).slice(-2);
+  let offset = date.getTimezoneOffset();
+  const sign = offset < 0 ? "+" : "-";
+  offset = Math.abs(offset);
   return (
-    new Date(d.getTime() - d.getTimezoneOffset() * 60000)
+    new Date(date.getTime() - date.getTimezoneOffset() * 60000)
       .toISOString()
       .slice(0, -1) +
     sign +
-    z((off / 60) | 0) +
+    parser((offset / 60) | 0) +
     ":" +
-    z(off % 60)
+    parser(offset % 60)
   );
 };
 
@@ -33,9 +35,22 @@ const parse_input_date = (date: unknown) => {
     value = null;
   }
 
-  return value;
+  if (value && !isNaN(value.getTime())) return value;
+
+  return null;
 };
 
-export { get_local_iso_date, parse_input_date };
+const this_time_ago = (date: Date) => {
+  try {
+    const value = DateTime.fromJSDate(date).toRelative();
 
-// TODO: Use https://github.com/kensnyder/any-date-parser?
+    if (value === "in 0 seconds" || value === "0 seconds ago") return "now";
+    if (!value) return "Invalid Date";
+
+    return value;
+  } catch (e) {
+    return "Invalid Date";
+  }
+};
+
+export { get_local_iso_date, parse_input_date, this_time_ago };

@@ -1,6 +1,5 @@
 # To Do
 
-- Hover to copy with little popup. Copy on click
-- Set default to now in the `timestamp` section
-- Look at Solid devtools?
-- Playwright automated testing?
+- TODO: Hover to copy with little popup. Copy on click
+- TODO: Look at Solid devtools?
+- TODO: Playwright automated testing?
