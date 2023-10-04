@@ -38,7 +38,7 @@ const Index: Component = () => {
 
   return (
     <main>
-      <h1 class="title">remurl</h1>
+      <h1 class="title">chronoclip</h1>
       <form onSubmit={(e) => e.preventDefault()}>
         <input
           type="text"
@@ -75,8 +75,6 @@ const Index: Component = () => {
               set_relative_date(this_time_ago(new Date()));
               return;
             }
-
-            // TODO: We should be able to get rid of our try/catch blocks
 
             set_iso_timestamp(value.toISOString());
             set_locale_string(value.toLocaleString());
@@ -136,4 +134,3 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 render(() => <Index />, root!);
 
 // TODO: Make favicon
-// TODO: Rename?

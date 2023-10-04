@@ -1,6 +1,4 @@
-# remurl
-
-`remurl` is a Chrome extension template using `Solid` and `crxjs`.
+# chronoclip
 
 WIP
 
