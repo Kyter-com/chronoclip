@@ -3,7 +3,12 @@ import { render } from "solid-js/web";
 import { createSignal } from "solid-js";
 
 // Utils
-import { get_local_iso_date, parse_input_date, this_time_ago } from "./utils";
+import {
+  get_local_iso_date,
+  parse_input_date,
+  this_time_ago,
+  copy_to_clipboard,
+} from "./utils";
 
 // CSS
 import "./index.css";
@@ -96,35 +101,43 @@ const Index: Component = () => {
       <div class="time-container">
         <div class="time-tile">
           <p>UNIX</p>
-          <code
-            onClick={async () => {
-              await navigator.clipboard
-                .writeText(String(unix_timestamp()))
-                .catch((e) => console.error("Error copying to clipboard", e));
-            }}
-          >
+          <code onClick={async () => await copy_to_clipboard(unix_timestamp())}>
             {unix_timestamp()}
           </code>
         </div>
         <div class="time-tile">
           <p>ISO (UTC)</p>
-          <code>{iso_timestamp()}</code>
+          <code onClick={async () => await copy_to_clipboard(iso_timestamp())}>
+            {iso_timestamp()}
+          </code>
         </div>
         <div class="time-tile">
           <p>Locale String</p>
-          <code>{locale_string()}</code>
+          <code onClick={async () => await copy_to_clipboard(locale_string())}>
+            {locale_string()}
+          </code>
         </div>
         <div class="time-tile">
           <p>ISO (local)</p>
-          <code>{locale_iso_timestamp()}</code>
+          <code
+            onClick={async () =>
+              await copy_to_clipboard(locale_iso_timestamp())
+            }
+          >
+            {locale_iso_timestamp()}
+          </code>
         </div>
         <div class="time-tile">
           <p>Locale Date String</p>
-          <code>{locale_date_string()}</code>
+          <code onClick={async () => copy_to_clipboard(locale_date_string())}>
+            {locale_date_string()}
+          </code>
         </div>
         <div class="time-tile">
           <p>Relative Time</p>
-          <code>{relative_date()}</code>
+          <code onClick={async () => copy_to_clipboard(relative_date())}>
+            {relative_date()}
+          </code>
         </div>
       </div>
     </main>
@@ -140,5 +153,3 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
 }
 
 render(() => <Index />, root!);
-
-// TODO: Make favicon

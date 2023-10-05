@@ -53,4 +53,17 @@ const this_time_ago = (date: Date) => {
   }
 };
 
-export { get_local_iso_date, parse_input_date, this_time_ago };
+const copy_to_clipboard = async (text: string | number) => {
+  try {
+    await navigator.clipboard.writeText(String(text));
+  } catch (error) {
+    console.error("Error copying to clipboard:", error);
+  }
+};
+
+export {
+  get_local_iso_date,
+  parse_input_date,
+  this_time_ago,
+  copy_to_clipboard,
+};
