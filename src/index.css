@@ -56,4 +56,5 @@ code {
   padding: 0.25rem;
   border-radius: 0.2rem;
   display: inline-block;
+  cursor: pointer;
 }

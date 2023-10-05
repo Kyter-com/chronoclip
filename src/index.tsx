@@ -96,7 +96,15 @@ const Index: Component = () => {
       <div class="time-container">
         <div class="time-tile">
           <p>UNIX</p>
-          <code>{unix_timestamp()}</code>
+          <code
+            onClick={async () => {
+              await navigator.clipboard
+                .writeText(String(unix_timestamp()))
+                .catch((e) => console.error("Error copying to clipboard", e));
+            }}
+          >
+            {unix_timestamp()}
+          </code>
         </div>
         <div class="time-tile">
           <p>ISO (UTC)</p>
