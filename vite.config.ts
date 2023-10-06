@@ -12,4 +12,8 @@ export default defineConfig({
   build: {
     target: "esnext",
   },
+  test: {
+    environment: "node",
+    dir: "tests",
+  },
 });
