@@ -1,0 +1,17 @@
+name: vitest
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+      - name: Install Dependencies
+        run: npm install
+      - name: Run Tests
+        run: npm run test
