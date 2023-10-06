@@ -10,4 +10,5 @@ on:
 
 jobs:
   run-code-analysis:
+    name: CodeQL Analysis
     uses: actions/reusable-workflows/.github/workflows/codeql-analysis.yml@main
