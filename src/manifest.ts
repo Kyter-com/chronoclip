@@ -4,7 +4,7 @@ const manifest = defineManifest({
   manifest_version: 3,
   name: "chronoclip",
   version: "0.0.1",
-  action: { default_popup: "index.html" },
+  action: { default_popup: "src/index.html" },
   icons: {
     16: "icon-16.png",
     32: "icon-32.png",
