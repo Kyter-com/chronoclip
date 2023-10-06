@@ -2,6 +2,10 @@
 import { render } from "solid-js/web";
 import { createSignal } from "solid-js";
 
+// Components
+import InfoIcon from "./components/icons/Info";
+import GitHubIcon from "./components/icons/GitHub";
+
 // Utils
 import {
   get_local_iso_date,
@@ -98,6 +102,11 @@ const Index: Component = () => {
         />
       </form>
 
+      <div class="info-div">
+        <InfoIcon />
+        <p>Click on timestamp to copy</p>
+      </div>
+
       <div class="time-container">
         <div class="time-tile">
           <p>UNIX</p>
@@ -140,6 +149,15 @@ const Index: Component = () => {
           </code>
         </div>
       </div>
+
+      <a
+        class="github-link"
+        href="https://github.com/Kyter-com/chronoclip"
+        target="_blank"
+      >
+        <GitHubIcon />
+        View Source
+      </a>
     </main>
   );
 };

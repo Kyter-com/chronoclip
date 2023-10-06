@@ -14,6 +14,10 @@ body {
   align-items: center;
 }
 
+.title {
+  margin-top: 1.5rem;
+}
+
 input {
   color: #e0e0e0;
   font-weight: bold;
@@ -24,7 +28,7 @@ input {
   border: 0px solid transparent;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   margin-top: 1rem;
 }
 input:focus {
@@ -37,10 +41,10 @@ input:focus {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 1rem 0rem 1rem 0rem;
   justify-content: space-evenly;
 }
 .time-tile {
+  border: 1px solid #444954;
   background-color: #3b404a;
   padding: 0rem 0.5rem 0.8rem 0.5rem;
   border-radius: 0.2rem;
@@ -57,4 +61,22 @@ code {
   border-radius: 0.2rem;
   display: inline-block;
   cursor: pointer;
+}
+
+.info-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+}
+
+.github-link {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: lightgray;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
