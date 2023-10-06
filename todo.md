@@ -1,3 +1,3 @@
 # To Do
 
-- TODO: Playwright automated testing?
+- TODO: Deploy to Chrome Web Store on prod push
