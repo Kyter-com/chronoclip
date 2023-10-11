@@ -1,3 +1,3 @@
 # To Do
 
-- TODO: Deploy to Chrome Web Store on prod push
+- TODO: Zip and release on GitHub Releases for new versions
