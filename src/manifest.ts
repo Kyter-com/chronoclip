@@ -6,7 +6,7 @@ const manifest = defineManifest({
   version: "0.0.1",
   action: { default_popup: "src/index.html" },
   description:
-    "chronoclip allows you to input a timestamp in a variety of date formats and copy the result to your clipboard from any of the resulting formats.",
+    "chronoclip transforms timestamps into 6 different formats. Input in UNIX, ISO, or Natural Language format.",
   icons: {
     16: "icon-16.png",
     32: "icon-32.png",
