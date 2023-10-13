@@ -2,7 +2,7 @@
 
 A Chrome extension that allows you to input a timestamp in UNIX, ISO, or Natural Language format and see the results in 6 different formats. Open source, no tracking, no ads.
 
-Built with [`solid.js`](https://github.com/solidjs/solid) and [`crxjs`](https://github.com/crxjs/chrome-extension-tools), 
+Built with [`solid.js`](https://github.com/solidjs/solid) and [`crxjs`](https://github.com/crxjs/chrome-extension-tools)
 
 [**Download Here**](https://chrome.google.com/webstore/detail/chronoclip/jeidjmcpgagembhjhfmlaiggcaecmiik/)
 
