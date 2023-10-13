@@ -4,6 +4,8 @@ A Chrome extension that allows you to input a timestamp in UNIX, ISO, or Natural
 
 ![image](https://github.com/Kyter-com/chronoclip/assets/38516489/b704932e-4b72-4249-aef8-7a6a3e89cfb1)
 
-![Screenshot 2](https://github.com/Kyter-com/chronoclip/assets/38516489/83bfc91e-bb76-42d5-8d2b-911e34a1e4d1)
+![image](https://github.com/Kyter-com/chronoclip/assets/38516489/c08e4a82-c4ff-4f99-a2ef-a22f0ee985c9)
 
-![Screenshot 3](https://github.com/Kyter-com/chronoclip/assets/38516489/8ce27807-a532-4995-ac6a-e93904bf0517)
+![image](https://github.com/Kyter-com/chronoclip/assets/38516489/8b8b5561-56a3-4723-8a82-859cd83213c4)
+
+![image](https://github.com/Kyter-com/chronoclip/assets/38516489/ef19fdf2-bc1a-4777-98a4-9bb8fd07084d)
