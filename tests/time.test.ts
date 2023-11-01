@@ -35,3 +35,16 @@ test("Relative time is correctly returned", () => {
   const oneMinuteAgoTimeAgo = this_time_ago(oneMinuteAgo);
   expect(oneMinuteAgoTimeAgo).toBe("1 minute ago");
 });
+
+test("UNIX timestamps are parsed between seconds and milliseconds", () => {
+  const seconds = "1022742000";
+  const milliseconds = "1022742000000";
+
+  const seconds_date = parse_input_date(seconds);
+  const milliseconds_date = parse_input_date(milliseconds);
+
+  expect(seconds_date?.toDateString()).toBe("Thu May 30 2002");
+  expect(milliseconds_date?.toDateString()).toBe("Thu May 30 2002");
+});
+
+// TODO: Add another box or info about if unix timestamp is in seconds or milliseconds
