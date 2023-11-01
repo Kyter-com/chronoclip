@@ -18,8 +18,25 @@ const get_local_iso_date = (starting_date?: Date) => {
   );
 };
 
-const parse_input_date = (date: unknown) => {
+const parse_input_date = (date: any) => {
   let value;
+
+  /* 
+    ----------------------- UNIX epoch time in seconds -----------------------
+    If the length is 11 or less, it's likely a UNIX timestamp in seconds. Based data off of https://www.epochconverter.com/ and how they parse examples.
+    There's a test case to cover seconds vs milliseconds.
+    Date comes in as a string from the input so we can check length safely.
+  */
+  if (date?.length <= 11) {
+    try {
+      let local = new Date(0);
+      local.setUTCSeconds(Number(date));
+      value = local;
+    } catch (e) {
+      value = null;
+    }
+  }
+  if (value && !isNaN(value.getTime())) return value;
 
   try {
     value = new Date(date as string);
