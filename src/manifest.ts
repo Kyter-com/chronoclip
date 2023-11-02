@@ -3,7 +3,7 @@ import { defineManifest } from "@crxjs/vite-plugin";
 const manifest = defineManifest({
   manifest_version: 3,
   name: "chronoclip",
-  version: "0.0.1",
+  version: "1.0.0",
   action: { default_popup: "src/index.html" },
   description:
     "chronoclip transforms timestamps into 6 different formats. Input in UNIX, ISO, or Natural Language format.",
