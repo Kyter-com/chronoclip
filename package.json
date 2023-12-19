@@ -20,7 +20,7 @@
     "vite": "^4.4.11",
     "vite-plugin-image-optimizer": "^1.1.7",
     "vite-plugin-solid": "^2.7.0",
-    "vitest": "^0.34.6"
+    "vitest": "^1.1.0"
   },
   "dependencies": {
     "luxon": "^3.4.4",
