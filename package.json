@@ -19,7 +19,7 @@
     "typescript": "^5.3.3",
     "vite": "^4.4.11",
     "vite-plugin-image-optimizer": "^1.1.7",
-    "vite-plugin-solid": "^2.7.0",
+    "vite-plugin-solid": "^2.10.1",
     "vitest": "^0.34.6"
   },
   "dependencies": {
